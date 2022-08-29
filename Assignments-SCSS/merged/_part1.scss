@@ -1,0 +1,127 @@
+.part1 {
+
+
+    padding: 2vh 5vh 2vh 5vh;
+    background-color: $backgroundColor;
+    display: flex;
+    justify-content: center;
+    min-height: 720px;
+
+    color: #555555;
+    font-family: $fontPart1;
+    font-size: 1.75em;
+
+}
+
+.container-part-1 {
+    background-color: transparent;
+    width: 90vh;
+
+    min-width: fit-content;
+    height: 95vh;
+    min-height: 720px;
+    box-shadow: -5px 10px 15px rgb(108, 104, 104);
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+
+
+
+
+    .img-part-1 {
+
+        grid-area: 1/1;
+        place-self: center;
+        position: relative;
+        top: 15.75%;
+
+        img {
+            border: solid 10px white;
+            border-radius: 50%;
+            transition: 0.35s;
+            transform: scale(0.75);
+        }
+    }
+
+    .areas-part-1 {
+        grid-area: 1/1;
+
+
+        header {
+
+            height: 66.666%;
+
+            min-height: fit-content;
+            background-color: #ffffff;
+            border-radius: 40px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            p {
+                margin: 0;
+                padding: 10%;
+                line-height: 2em;
+            }
+
+        }
+
+
+        footer {
+
+
+            height: 33.333%;
+            background-color: $namesectionBackgroundcolor-part1;
+            border-radius: 40px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 2fr 1fr;
+            place-items: center;
+            grid-template-areas: "empty""h2""p";
+
+
+            h2 {
+                text-transform: uppercase;
+                font-weight: lighter;
+                font-size: 1.2em;
+                margin: 0;
+                align-self: end;
+                grid-area: h2;
+
+                color: white;
+                text-align: center;
+            }
+
+            p {
+                grid-area: p;
+                color: $namesectionText-part1;
+                text-align: center;
+            }
+
+        }
+    }
+}
+
+@media screen and(max-width: 720px) {
+    .container-part-1 {
+        min-width: 600px;
+        min-height: 720px;
+
+        .areas-part-1 footer {
+            grid-template-rows: 0.5fr 1fr 1fr;
+
+            h2 {
+                align-self: center;
+            }
+        }
+    }
+
+    .container-part-1 .img-part-1 img {
+        transform: scale(0.5);
+    }
+
+
+}

@@ -1,0 +1,243 @@
+.part1 {
+  padding: 2vh 5vh 2vh 5vh;
+  background-color: #c3cfe2;
+  display: flex;
+  justify-content: center;
+  min-height: 720px;
+  color: #555555;
+  font-family: "Trebuchet", Arial, sans-serif;
+  font-size: 1.75em;
+}
+
+.container-part-1 {
+  background-color: transparent;
+  width: 90vh;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: 95vh;
+  min-height: 720px;
+  box-shadow: -5px 10px 15px rgb(108, 104, 104);
+  border-radius: 40px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+}
+.container-part-1 .img-part-1 {
+  grid-area: 1/1;
+  place-self: center;
+  position: relative;
+  top: 15.75%;
+}
+.container-part-1 .img-part-1 img {
+  border: solid 10px white;
+  border-radius: 50%;
+  transition: 0.35s;
+  transform: scale(0.75);
+}
+.container-part-1 .areas-part-1 {
+  grid-area: 1/1;
+}
+.container-part-1 .areas-part-1 header {
+  height: 66.666%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.container-part-1 .areas-part-1 header p {
+  margin: 0;
+  padding: 10%;
+  line-height: 2em;
+}
+.container-part-1 .areas-part-1 footer {
+  height: 33.333%;
+  background-color: #686de0;
+  border-radius: 40px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  place-items: center;
+  grid-template-areas: "empty" "h2" "p";
+}
+.container-part-1 .areas-part-1 footer h2 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 1.2em;
+  margin: 0;
+  align-self: end;
+  grid-area: h2;
+  color: white;
+  text-align: center;
+}
+.container-part-1 .areas-part-1 footer p {
+  grid-area: p;
+  color: #d4cdde;
+  text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+  .container-part-1 {
+    min-width: 600px;
+    min-height: 720px;
+  }
+  .container-part-1 .areas-part-1 footer {
+    grid-template-rows: 0.5fr 1fr 1fr;
+  }
+  .container-part-1 .areas-part-1 footer h2 {
+    align-self: center;
+  }
+  .container-part-1 .img-part-1 img {
+    transform: scale(0.5);
+  }
+}
+section.part-2 {
+  padding: 10%;
+  background-color: #c3cfe2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 35px 25px;
+}
+section.part-2 .face-part-2 {
+  background-color: black;
+  margin: 0;
+  border-radius: 5%;
+  position: relative;
+}
+section.part-2 .face-part-2:hover img.img-part-2 {
+  opacity: 0;
+  transform: scale(1.02);
+}
+section.part-2 .face-part-2:hover button.part-2 {
+  opacity: 1;
+}
+section.part-2 .face-part-2 img.img-part-2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 5%;
+  transition: opacity 350ms, transform 350ms;
+}
+section.part-2 .face-part-2 button.part-2 {
+  background-color: white;
+  opacity: 0;
+  padding: 5%;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 400ms;
+}
+section.part-2 .face-part-2 button.part-2:active {
+  background-color: #343333;
+  color: white;
+}
+
+@media screen and (max-width: 720px) {
+  section.part-2 {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+  section.part-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.part3 {
+  font-size: 1.5em;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+.part3 .social-media-part-3 {
+  position: fixed;
+  left: 97%;
+  width: 3%;
+  height: 40vh;
+  top: 65%;
+  transition: top 350ms;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.part3 .social-media-part-3 .button-part-3 {
+  width: 350px;
+  transform: translateX(300px);
+  transition: transform 350ms;
+}
+.part3 .social-media-part-3 .button-part-3 a {
+  color: white;
+  font-size: 1em;
+}
+.part3 .social-media-part-3 .button-part-3 a:visited {
+  color: white;
+}
+.part3 .social-media-part-3 .button-part-3:hover {
+  transform: translateX(230px);
+  width: 500px;
+}
+.part3 .social-media-part-3 .button-part-3 .blog {
+  padding: 10px;
+  background-color: #e17b77;
+}
+.part3 .social-media-part-3 .button-part-3 .blog::after {
+  padding-left: 9%;
+  font-size: 0.7em;
+  cursor: pointer;
+  content: "Check my blog";
+}
+.part3 .social-media-part-3 .button-part-3 .twitter {
+  background-color: #00aced;
+  padding: 10px;
+}
+.part3 .social-media-part-3 .button-part-3 .twitter::after {
+  padding-left: 9%;
+  font-size: 0.7em;
+  cursor: pointer;
+  content: "Follow me on";
+}
+.part3 .social-media-part-3 .button-part-3 .linkedin {
+  background-color: #007bb6;
+  padding: 10px;
+}
+.part3 .social-media-part-3 .button-part-3 .linkedin::after {
+  padding-left: 9%;
+  font-size: 0.7em;
+  cursor: pointer;
+  content: "Connect on Linkedin";
+}
+.part3 .social-media-part-3 .button-part-3 .facebook {
+  background-color: #3b5998;
+  padding: 10px;
+}
+.part3 .social-media-part-3 .button-part-3 .facebook::after {
+  padding-left: 9%;
+  font-size: 0.7em;
+  cursor: pointer;
+  content: "Like my Facebook";
+}
+.part3 .social-media-part-3 .button-part-3 .github {
+  background-color: #333;
+  padding: 10px;
+}
+.part3 .social-media-part-3 .button-part-3 .github::after {
+  padding-left: 9%;
+  font-size: 0.7em;
+  cursor: pointer;
+  content: "See projects on Github";
+}
+@media screen and (max-height: 720px) {
+  .part3 .social-media-part-3 {
+    top: 5%;
+  }
+}
+
+body {
+  margin: 0;
+}/*# sourceMappingURL=Styles-merged.css.map */

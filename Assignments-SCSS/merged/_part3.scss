@@ -1,0 +1,144 @@
+.part3 {
+
+    font-size: 1.5em;
+    color: white;
+    font-family: $fontPart3;
+
+
+
+    .social-media-part-3 {
+        position: fixed;
+
+        left: 97%;
+        width: 3%;
+        height: 40vh;
+        top: 65%;
+
+        transition: top 350ms;
+
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+
+        .button-part-3 {
+
+            width: 350px;
+            transform: translateX(300px);
+            transition: transform 350ms;
+
+
+            a {
+                color: white;
+                font-size: 1em;
+
+                &:visited {
+                    color: white;
+                }
+            }
+
+
+            &:hover {
+                transform: translateX(230px);
+                width: 500px;
+            }
+
+            .blog {
+
+                padding: $paddingBtn;
+                background-color: #e17b77;
+
+
+
+                &::after {
+                    padding-left: $paddingBtnAfter;
+
+                    font-size: $fntSizeBtn;
+                    cursor: $hand;
+
+                    content: "Check my blog";
+                }
+
+            }
+
+
+
+            .twitter {
+                background-color: #00aced;
+                padding: $paddingBtn;
+
+                &::after {
+                    padding-left: $paddingBtnAfter;
+                    font-size: $fntSizeBtn;
+                    cursor: $hand;
+                    content: "Follow me on";
+                }
+
+            }
+
+
+
+
+            .linkedin {
+                background-color: #007bb6;
+                padding: $paddingBtn;
+
+                &::after {
+                    padding-left: $paddingBtnAfter;
+                    font-size: $fntSizeBtn;
+                    cursor: $hand;
+                    content: "Connect on Linkedin";
+
+                }
+
+
+            }
+
+
+
+
+            .facebook {
+                background-color: #3b5998;
+                padding: $paddingBtn;
+
+                &::after {
+                    padding-left: $paddingBtnAfter;
+                    font-size: $fntSizeBtn;
+                    cursor: $hand;
+                    content: "Like my Facebook";
+
+                }
+
+            }
+
+
+
+
+            .github {
+                background-color: #333;
+                padding: 10px;
+
+                &::after {
+                    padding-left: $paddingBtnAfter;
+                    font-size: $fntSizeBtn;
+                    cursor: $hand;
+                    content: "See projects on Github";
+
+                }
+
+            }
+
+        }
+
+    }
+
+    @media screen and (max-height: 720px) {
+
+
+        .social-media-part-3 {
+            top: 5%;
+        }
+    }
+}

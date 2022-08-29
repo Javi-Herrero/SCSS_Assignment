@@ -1,0 +1,19 @@
+$backgroundColor: #c3cfe2;
+$namesectionText-part1: #d4cdde;
+$namesectionBackgroundcolor-part1: #686de0;
+
+$fontPart1: 'Trebuchet', Arial, sans-serif;
+$fontPart3: 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+/////
+$paddingBtn: 10px;
+$paddingBtnAfter: 9%;
+$fntSizeBtn: 0.7em;
+$hand: pointer;
+
+
+@import 'part1', 'part2', 'part3';
+
+body {
+    margin: 0;
+}
